@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .menu-container {
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .menu-container h3 {
+            background-color: #4caf50; /* Verde */
+            color: white;
+            margin: 0;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .submenu {
+            list-style-type: none;
+            padding: 10px;
+            display: none; /* Escondido por padrão */
+        }
+
+        .submenu li {
+            margin: 5px 0;
+        }
+
+        .submenu li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 1.2em; /* Aumenta o tamanho da fonte */
+        }
+
+        .submenu li a:hover {
+            background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+        }
+
+        .icon {
+            font-size: 1.5em; /* Tamanho do ícone */
+            margin-right: 8px; /* Espaço entre ícone e texto */
+            vertical-align: middle; /* Alinha verticalmente */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="menu-container">
+            <h3 onclick="toggleMenu(this)">Revisão <span class="icon">📘</span></h3>
+            <ul class="submenu">
+                <li><a href="revisao/exer1.php">Exercício 01</a></li>
+                <li><a href="revisao/exer2.php">Exercício 02</a></li>
+                <li><a href="revisao/exer3.php">Exercício 03</a></li>
+                <li><a href="revisao/exer4.php">Exercício 04</a></li>
+                <li><a href="revisao/exer5.php">Exercício 05</a></li>
+                <li><a href="revisao/exer6.php">Exercício 06</a></li>
+                <li><a href="revisao/exer7.php">Exercício 07</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-container">
+            <h3 onclick="toggleMenu(this)">Lista 2 <span class="icon">📄</span></h3>
+            <ul class="submenu">
+                <li><a href="Lista_2/exer01.php">Exercício 01</a></li>
+                <li><a href="Lista_2/exer02.php">Exercício 02</a></li>
+                <li><a href="Lista_2/exer03.php">Exercício 03</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-container">
+            <h3 onclick="toggleMenu(this)">Lista 3 <span class="icon">📚</span></h3>
+            <ul class="submenu">
+                <li><a href="Lista_3/exercicio1.php">Exercício 01</a></li>
+                <li><a href="Lista_3/exercicio2.php">Exercício 02</a></li>
+                <li><a href="Lista_3/exercicio3.php">Exercício 03</a></li>
+                <li><a href="Lista_3/exercicio4.php">Exercício 04</a></li>
+                <li><a href="Lista_3/exercicio5.php">Exercício 05</a></li>
+                <li><a href="Lista_3/exercicio6.php">Exercício 06</a></li>
+                <li><a href="Lista_3/exercicio7.php">Exercício 07</a></li>
+                <li><a href="Lista_3/exercicio8.php">Exercício 08</a></li>
+                <li><a href="Lista_3/exercicio9.php">Exercício 09</a></li>
+                <li><a href="Lista_3/exercicio10.php">Exercício 10</a></li>
+                <li><a href="Lista_3/exercicio11.php">Exercício 11</a></li>
+                <li><a href="Lista_3/exercicio12.php">Exercício 12</a></li>
+                <li><a href="Lista_3/exercicio13.php">Exercício 13</a></li>
+                <li><a href="Lista_3/exercicio14.php">Exercício 14</a></li>
+                <li><a href="Lista_3/exercicio15.php">Exercício 15</a></li>
+                <li><a href="Lista_3/exercicio16.php">Exercício 16</a></li>
+                <li><a href="Lista_3/exercicio17.php">Exercício 17</a></li>
+                <li><a href="Lista_3/exercicio18.php">Exercício 18</a></li>
+                <li><a href="Lista_3/exercicio19.php">Exercício 19</a></li>
+                <li><a href="Lista_3/exercicio20.php">Exercício 20</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu(element) {
+            const submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(submenu => {
+                if (submenu !== element.nextElementSibling) {
+                    submenu.style.display = 'none'; // Esconder outros submenus
+                }
+            });
+            const submenu = element.nextElementSibling;
+            submenu.style.display = (submenu.style.display === "block") ? "none" : "block"; // Alterna o submenu atual
+        }
+    </script>
+</body>
+</html>
